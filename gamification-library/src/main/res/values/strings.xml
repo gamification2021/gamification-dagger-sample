@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">gamification-library</string>
+    <string name="gamification">Gamification</string>
+    <string name="shake_amp_win"><![CDATA[Shake & win]]></string>
+    <string name="shake_the_phone_to_crack_the_egg">Shake your phone to crack the egg</string>
+    <string name="play_now">"Play Now "</string>
+</resources>

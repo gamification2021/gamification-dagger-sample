@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.app.gamification_library">
+
+    <application
+        android:name=".base.BaseApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TICLgamificationsample">
+
+        <activity
+            android:name=".ui.ShakeAndWin.ShakeAndWinActivity"
+            android:exported="true">
+        </activity>
+
+        <activity
+            android:name=".ui.ShakeAndWinGame.ShakeAndWinGameActivity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".ui.BaseActivity"
+            android:exported="true"/>
+
+        <receiver android:name=".utils.ShakeReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="shake.detector" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>

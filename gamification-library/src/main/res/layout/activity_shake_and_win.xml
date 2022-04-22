@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:bind="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="listener"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="main"
+            type="com.app.gamification_library.model.Main" />
+    </data>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/purple"
+        tools:context=".ui.ShakeAndWinActivity"
+        tools:ignore="ResourceName">
+
+        <FrameLayout
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="20dp"
+            android:layout_gravity="start"
+            android:background="@drawable/drawable_white_circle">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_baseline_close_24" />
+
+        </FrameLayout>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/termsBtn"
+            android:layout_gravity="end"
+            android:visibility="gone"
+            android:layout_margin="20dp"
+            android:background="@drawable/ic_baseline_info_24"/>
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center"
+            android:id="@+id/homeBox"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/egg_icon"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/gameName"
+                android:text="@{main.data.name}"
+                android:singleLine="true"
+                android:textColor="@android:color/white"
+                fontPath="fonts/STCForward-Bold.ttf"
+                android:textSize="26sp"
+                tools:ignore="MissingPrefix" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:id="@+id/gameDescripiton"
+                android:text="@{main.data.description}"
+                android:singleLine="true"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/gameExpires"
+                android:textSize="14sp"
+                android:text="@{main.data.expiryDate}"
+                android:singleLine="true"
+                android:layout_marginTop="7dp"
+                android:textColor="@android:color/white"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/playNow"
+                android:text="@string/play_now"
+                android:onClick="@{listener::onClick}"
+                android:textColor="@color/white"
+                android:background="@drawable/button_background"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp"/>
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:id="@+id/progressBar"/>
+
+    </FrameLayout>
+</layout>
