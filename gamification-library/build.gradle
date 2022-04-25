@@ -10,6 +10,7 @@ android {
         targetSdk 31
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
@@ -72,4 +73,7 @@ dependencies {
 
     //Shake deductor
     implementation 'com.github.safetysystemtechnology:android-shake-detector:v1.2'
+
+    implementation 'androidx.multidex:multidex:2.0.1'
+
 }
